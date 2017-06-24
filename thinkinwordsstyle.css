@@ -1,0 +1,96 @@
+html{
+			height:100%;
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		}
+		body{
+			box-sizing: block;
+			margin: auto;
+			padding-bottom: 89px;
+			max-width: 1024px;
+			background-color: #FAFAFA;
+		}
+		header{		
+		}
+		p{		
+			display: block;
+			margin-right: 13px;
+			margin-bottom: 13px;
+			margin-top: 21px;
+			margin-left: 13px;
+			font-family: Monaco, Menlo, monospace;
+			color: #777777;
+			font-size: 11px;
+			font-weight: lighter;
+			letter-spacing: 0px;
+			line-height: 1;
+		}
+		figure{
+			max-width: 100%;
+			margin: auto;
+			max-height: 768px;
+			overflow:hidden;
+		}
+		img{
+			display: block;
+			margin: auto;
+			max-width: 100%;
+			height: auto;
+			overflow: hidden;
+		}
+
+		ul{
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			z-index: +1;
+		}
+		ul li{
+			float: none;
+		}
+		ul li ul{
+			float: right;
+		}
+		ul li ul li{
+			float: left;
+		}
+
+		a{
+			display: block;
+			color: #555555;
+			text-align: center;
+			padding: 15px 15px;
+			text-decoration: none;
+			font-family: Monaco, Menlo, monospace;
+			font-size: 11px;
+			font-weight: lighter;
+			letter-spacing: 0px;
+			line-height: 1;
+			float:left;
+		}
+/*		a:hover:not(.active) {background-color: #DDBB22;}
+		li.heading {background-color: #22BBBB;}
+*/
+		/*ul li ul li:hover:not(.active) {background-color: #AADDDD;}*/
+		ul li ul li:hover, ul li ul li:active {background-color: #AADDDD;}
+		li.heading {color: #EECCAA;}
+		a.active {
+			color: #00AAAA;
+			letter-spacing: 3px;
+			font-size: 11px;
+		}
+		@media screen and (max-width: 600px){
+			a{
+				float: none;
+			}
+			ul li{
+				float:none;
+			}
+			ul li ul li{
+				float: none;
+			}
+
+			ul li ul{
+				float: none;	
+			}
+		}
