@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="description" content="NA">
+	<meta name="viewport" content="width=device-width, height=device-height">
+	<link rel="stylesheet" type="text/css" href="thinkinwordsstyle.css">
+	<title>thinkinwords - about</title>
+</head>
+
+<body>
+
+	<nav>
+		<ul id="menu">
+			<li class="heading"><a class="active" onclick="dropdown()" href="#home">thinkinwords</a>
+
+				<ul id="items">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="faq.html">faq</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="about.html">About</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+
+<!-- 	<figure>
+	<img srcset="banner.png" id="image"></image>
+	</figure>
+ -->
+	<p id="info">
+	We are fookin oosoom (except for the prik who is making our website - what a wuss).<br>
+	But moving forward we intend to optimise our deliverables. <br>
+	Yes, we would really like that.<br>
+
+	</p>
+
+
+	<footer></footer>
+
+
+	<script>
+		// var pageWidth;
+
+		if (matchMedia) {
+			var pageWidth = window.matchMedia("(min-width: 600px)");
+			pageWidth.addListener(WidthChange);
+			WidthChange(pageWidth);
+		}
+
+		function WidthChange(pageWidth){
+			if (pageWidth.matches) {
+				document.getElementById("items").style.display = "block";
+			}
+			else {
+				document.getElementById("items").style.display = "none";
+			}
+		}
+
+		function dropdown() {
+			//pageWidth= window.matchMedia( "(min-width: 600px)" );
+			if (pageWidth.matches) {
+				document.getElementById("items").style.display = "block";
+			}
+			else {
+				var visibility = document.getElementById("items");
+				if(visibility.style.display == "block"){
+					visibility.style.display = "none";
+				}
+				else{
+					visibility.style.display = "block";
+				}
+			}
+
+		}
+	</script>
+</body>
+</html>
