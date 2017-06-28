@@ -9,25 +9,24 @@
 
 <body>
 
-	<nav>
-		<ul id="menu">
-			<li class="heading"><a class="active" onclick="dropdown()" href="#home">thinkinwords</a>
 
-				<ul id="items">
-					<!-- <li><a href="index.html">Home</a></li> -->
-					<li><a href="#The_Programme_Heading">the programme</a></li>
-					<li><a href="#For_Students_Heading">for students</a></li>
-					<li><a href="#Faq_Heading">faq</a></li>
-					<li><a href="#About_Us_Heading">about us</a></li>
-				</ul>
-			</li>
+	<nav>
+	<header onclick="dropdown()">thinkinwords</header>
+		<ul id="menu">
+			<!-- <li><a href="index.html">Home</a></li> -->
+			<li><a onclick="hideMenu()" href="#The_Programme_Heading">the programme</a></li>
+			<li><a onclick="hideMenu()" href="#For_Students_Heading">for students</a></li>
+			<li><a onclick="hideMenu()" href="#Faq_Heading">faq</a></li>
+			<li><a onclick="hideMenu()" href="#About_Us_Heading">about us</a></li>
 		</ul>
+
+
 	</nav>
 	<figure>
 		<img srcset="banner.png" id="image"></image>
 	</figure>
 
-	
+
 
 	<p id="intro">
 		Thinking is important: it’s how we make sense of the world and of new information. Thinking is also social: we build our ideas through our interactions with others. At <b>thinkinwords</b> we want to show students how to <i>think</i> about <i>thinking</i> and how to <i>think with other people</i>: a systematic approach to more effectively analyse and engage with the world around them.
@@ -43,7 +42,6 @@
 		The programme uses collaborative and constructively antagonistic argumentation in combination with different modes of participation to create environments for specific thinking exercises. The students will be speaking, listening, writing, reading, debating, and discussing individually, in pairs or groups, and as a class, corresponding to the abilities whose development is being targeted.<br><br>
 		Our content will draw from public discourse to cover how we address policy and controversy as well as popular fiction to accessibly analogise complex philosophical issues. To authentically reflect the interests and experiences of the students while still broadening their horizons, our programme will also use examples from their lives to generate discussion. <br><br>
 		We want our programme to be detached from the stresses of the school system, so we will be avoiding textbook content and performance testing. Instead, we will be generating baseline and end-of-programme reviews of the students’ abilities and interests through auto-diagnostic activities and our classroom observations. Our session plans are designed to flexibly accommodate the conclusions of our monitoring as well as feedback from students.<br>
-
 	</p>
 
 	<h1 id="Faq_Heading">FAQ</h1>
@@ -82,7 +80,6 @@
 		some of the most rigorously tested and academically
 		exciting work from around the world on teaching
 		thinking to students.<br>
-
 	</p>
 
 
@@ -101,26 +98,36 @@
 
 		function WidthChange(pageWidth){
 			if (pageWidth.matches) {
-				document.getElementById("items").style.display = "block";
+				document.getElementById("menu").style.display = "block";
 			}
 			else {
-				document.getElementById("items").style.display = "none";
+				document.getElementById("menu").style.display = "none";
 			}
 		}
 
 		function dropdown() {
 			//pageWidth= window.matchMedia( "(min-width: 600px)" );
 			if (pageWidth.matches) {
-				document.getElementById("items").style.display = "block";
+				document.getElementById("menu").style.display = "block";
 			}
 			else {
-				var visibility = document.getElementById("items");
+				var visibility = document.getElementById("menu");
 				if(visibility.style.display == "block"){
 					visibility.style.display = "none";
 				}
 				else{
 					visibility.style.display = "block";
 				}
+			}
+		}
+		function hideMenu() {
+			//pageWidth= window.matchMedia( "(min-width: 600px)" );
+			if (pageWidth.matches) {
+				document.getElementById("menu").style.display = "block";
+			}
+			else {
+				var visibility = document.getElementById("menu");
+				visibility.style.display = "none";
 			}
 
 		}

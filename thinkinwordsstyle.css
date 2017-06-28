@@ -15,6 +15,7 @@ h1{
 	margin-bottom: 15px;
 	margin-top: 30px;
 	margin-left: 15px;
+	padding-top: 45px;
 	font-family: sans-serif;
 	color: #00AAAA;
 	font-size: 22px;
@@ -44,12 +45,7 @@ figure{
 	max-height: 768px;
 	overflow:hidden;
 }
-nav{
-	/*position:fixed;
-	max-width:100%;
-	background-color: #FFFFFF;
-	*/
-}
+
 img{
 	display: block;
 	margin: auto;
@@ -58,27 +54,51 @@ img{
 	overflow: hidden;
 }
 
+header{
+	display: block;
+	box-sizing: border-box;
+	color: #00AAAA;
+	text-align: center;
+	vertical-align: middle;
+	height:45px;
+	padding: 15px 15px;
+	font-family: Monaco, Menlo, monospace;
+	font-size: 11px;
+	font-weight: lighter;
+	letter-spacing: 3px;
+	line-height: 1;
+	float:left;
+}
+nav{
+	position:fixed;
+	display: block;
+	background-color: #FAFAFA;
+	width: 1024px;
+	/*overflow: hidden;*/
+
+
+}
+
 ul{
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
 	
+	float:right;
+	
 }
 ul li{
-	float: none;
-}
-ul li ul{
-	float: right;
-}
-ul li ul li{
 	float: left;
 }
 
 a{
 	display: block;
+	box-sizing: border-box;
 	color: #555555;
 	text-align: center;
+	vertical-align: middle;
+	height:45px;
 	padding: 15px 15px;
 	text-decoration: none;
 	font-family: Monaco, Menlo, monospace;
@@ -95,14 +115,7 @@ a{
 		ul li ul li:hover, ul li ul li:active {
 			background-color: #AADDDD;
 		}
-		li.heading {
-			color: #EECCAA;
-		}
-		a.active {
-			color: #00AAAA;
-			letter-spacing: 3px;
-			font-size: 11px;
-		}
+
 
 /*		table{
 			display: block;
@@ -151,20 +164,26 @@ a{
 			color: #777777;
 			padding-bottom: 15px;
 }
-
+		@media screen and (max-width: 1024px){
+			nav{
+				width: 100%;
+			}
+		}
 		@media screen and (max-width: 700px){
+			header{
+				float: none;
+			}
 			a{
 				float: none;
 			}
-			ul li{
-				float:none;
+			nav{
+				width: 100%;
 			}
-			ul li ul li{
+			ul{
 				float: none;
 			}
-
-			ul li ul{
-				float: none;	
+			ul li{
+				float: none;
 			}
 			p{
 				columns: 1;
