@@ -11,12 +11,12 @@
 
 
 	<nav>
-	<header onclick="dropdown()">thinkinwords</header>
+		<header onclick="dropdown()">thinkinwords</header>
 		<ul id="menu">
 			<!-- <li><a href="index.html">Home</a></li> -->
 			<li><a onclick="hideMenu()" href="#The_Programme_Heading">the programme</a></li>
-			<li><a onclick="hideMenu()" href="#For_Students_Heading">for students</a></li>
 			<li><a onclick="hideMenu()" href="#Faq_Heading">faq</a></li>
+			<li><a onclick="hideMenu()" href="#For_Students_Heading">for students</a></li>
 			<li><a onclick="hideMenu()" href="#About_Us_Heading">about us</a></li>
 		</ul>
 
@@ -45,8 +45,26 @@
 	</p>
 
 	<h1 id="Faq_Heading">FAQ</h1>
-	<p id="Faq">
-	</p>
+	<table id="Faq">
+		<tr>
+			<th id="q1" onclick="showAnswer(a1)">Why is the fire so big?</th>
+		</tr>
+		<tr>
+			<td id="a1">Blah swot swot blah blah blah swot</td>
+		</tr>
+		<tr> 
+			<th id="q2" onclick="showAnswer(a2)">Why is Ujan taking so long?</th>
+		</tr>
+		<tr>
+			<td id="a2">Blah swot swot blah blah blah swot best practices</td>
+		</tr>
+		<tr> 
+			<th id="q3" onclick="showAnswer(a3)">What about vertical integration?</th>
+		</tr>
+		<tr>
+			<td  id="a3">Blah swot swot blah blah blah swot blah bloo blee la lee la dee daa</td>
+		</tr>
+	</table>
 
 	<h1 id="For_Students_Heading">For Students</h1>
 	<p id="For_Students">
@@ -84,7 +102,9 @@
 
 
 
-	<footer></footer>
+	<footer>
+		contact@thinkinwords.org
+	</footer>
 
 
 	<script>
@@ -129,7 +149,15 @@
 				var visibility = document.getElementById("menu");
 				visibility.style.display = "none";
 			}
+		}
 
+		function showAnswer(ansid){
+			if(ansid.style.display == "block"){
+				ansid.style.display = "none";
+			}
+			else{
+				ansid.style.display = "block";
+			}
 		}
 	</script>
 </body>
