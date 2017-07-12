@@ -55,9 +55,10 @@ div.section{
 	background-color: rgba(1.0,1.0,1.0,0.0);
 
 	/*float:right;*/
-	overflow-y: visible;
+	overflow-y: hidden;
 	overflow-x: hidden;
 	transition: top 1.0s;
+	z-index: 0;
 }
 div.section:target{
 	top:75px;
@@ -65,6 +66,7 @@ div.section:target{
 	z-index: -1;
 	overflow-y:scroll;
 	padding-bottom: 135px;
+
 }
 div.card{
 	box-sizing: border-box;
@@ -149,7 +151,11 @@ a.contact{
 	transition: padding 2s;
 }
 a.introHeading, a.programmeHeading{
-	padding-bottom: 30px;
+	margin: 15px;
+	padding: 15px;
+	position: absolute;
+	top:0px;
+	top:0px;
 }
 
 ul li:hover, ul li:active {
