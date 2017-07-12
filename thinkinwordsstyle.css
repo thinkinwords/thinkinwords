@@ -1,5 +1,6 @@
 html{
 	height:100%;
+	width: 100%;
 	background-color: #DDDDDD;
 	/*-webkit-tap-highlight-color: rgba(0, 0, 0, 0);*/
 }
@@ -41,7 +42,7 @@ div.section{
 	box-sizing: border-box;
 	display: block;
 	position: absolute;
-	top:  calc(100vh - 120px);
+	top:  calc(100% - 120px);
 	left:50vw;
 	width: calc(50vw + 20px);
 	height: 100%;
