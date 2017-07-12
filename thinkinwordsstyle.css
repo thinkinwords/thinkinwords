@@ -47,7 +47,7 @@ div.section{
 	width: calc(50vw + 20px);
 	height: 100%;
 	padding: 15px;
-	padding-bottom: 135px;
+	padding-bottom: 0px;
 	margin-left:0px;
 	/*margin-top: 50vh;*/
 	margin-right:0px;
@@ -55,7 +55,7 @@ div.section{
 	background-color: rgba(1.0,1.0,1.0,0.0);
 
 	/*float:right;*/
-	overflow-y: scroll;
+	overflow-y: visible;
 	overflow-x: hidden;
 	transition: top 1.0s;
 }
@@ -63,6 +63,8 @@ div.section:target{
 	top:75px;
 	transition: top 1.0s;
 	z-index: -1;
+	overflow-y:scroll;
+	padding-bottom: 135px;
 }
 div.card{
 	box-sizing: border-box;
