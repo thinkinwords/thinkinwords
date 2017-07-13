@@ -75,6 +75,9 @@ div.approach, div.programme, div.impact, div.faq, div.us {
 	max-width: 675px;
 	display: block;
 	position: sticky;
+	position: -webkit-sticky;
+  	position: -moz-sticky;
+  	position: -ms-sticky;
 	top:0px;
 	padding: 15px;
 	margin-bottom: 0px;
