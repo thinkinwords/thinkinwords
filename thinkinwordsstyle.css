@@ -69,7 +69,6 @@ div.anchorSpace{
 	margin-right: 15px;
 	margin-bottom: 50vh;
 	background-color: #00FAFF;
-	overflow-x: hidden;
 }
 div.approach, div.programme, div.impact, div.faq, div.us {
 	box-sizing: border-box;
@@ -83,7 +82,6 @@ div.approach, div.programme, div.impact, div.faq, div.us {
 	margin-right: 15px;
 	/*box-shadow: 0px -2px 2px 2px rgba(0, 0, 0, 0.1);*/
 	background-color: #EAEAEA;
-	overflow-x: hidden;
 }
 div.approach{
 	bottom:200px;
