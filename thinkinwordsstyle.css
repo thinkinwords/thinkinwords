@@ -68,7 +68,7 @@ div.anchorSpace{
 	margin-left: 50vw;
 	margin-right: 15px;
 	margin-bottom: 20vh;
-	background-color: #FAFAFA;
+	background-color: rgba(1.0,1.0,1.0,0.0);
 }
 div.approach, div.programme, div.impact, div.faq, div.us {
 	box-sizing: border-box;
