@@ -11,18 +11,8 @@
 </head>
 
 <body>
-<!-- 	<nav>
-		<ul id="menu">
-			<li><a onclick="hideMenu()" href="#intro">Home</a></li>
-			<li><a onclick="hideMenu()" href="#The_Programme">the programme</a></li>
-			<li><a onclick="hideMenu()" href="#Faq_Heading">faq</a></li>
-			<li><a onclick="hideMenu()" href="#For_Students_Heading">for students</a></li>
-			<li><a id="contact" class="contact" onclick="hideMenu()" href="#About_Us_Heading">contact@thinkinwords.com</a></li>
-		</ul>
-	</nav>
- -->	
  	
-<header><p class="tiw">thinkinwords</p><p class="cursor">_</p></header>
+	<header><p class="tiw">thinkinwords</p><p class="cursor">_</p></header>
 
 	<div id="intro" class="anchorSpace"></div>
 	<div id="section" class="section">
@@ -167,31 +157,49 @@
 	</footer>
 	<div class="anchorSpace"></div>
 
-<!-- 	<nav>
-		<p id="menu" class="menu" onclick="collapse()">collapse</p>
- 	</nav> -->
+ 	<nav>
+		<ul id="menu" class="menu">
+			<li><a onclick="hideMenu()" href="#approach">Our Approach</a></li>
+			<li><a onclick="hideMenu()" href="#programme">The Programme</a></li>
+			<li><a onclick="hideMenu()" href="#impact">Impact</a></li>
+			<li><a onclick="hideMenu()" href="#faq">FAQ</a></li>
+			<li><a onclick="hideMenu()" href="#us">About Us</a></li>
+		</ul>
+		<button onclick="dropdown()">Menu</button>
+	</nav>
+
 
 
 	<script>
-		function collapse() {
-		
-			if(menu.innerHTML == "collapse"){
-				approachHeading.style.bottom = "0px";
-				programmeHeading.style.bottom = "0px";
-				impactHeading.style.bottom = "0px";
-				faqHeading.style.bottom = "0px";
-				usHeading.style.bottom = "0px";
-				menu.innerHTML = "spread";
+		function hideMenu() {
+			menu.style.display = "none";
+		}
+		function dropdown() {
+			if(menu.style.display == "block"){
+				menu.style.display = "none";
 			}
 			else{
-				approachHeading.style.bottom = "160px";
-				programmeHeading.style.bottom = "120px";
-				impactHeading.style.bottom = "80px";
-				faqHeading.style.bottom = "40px";
-				usHeading.style.bottom = "0px";
-				menu.innerHTML = "collapse";
+				menu.style.display = "block";
 			}
 		}
+		// function collapse() {
+		// 	if(menu.innerHTML == "collapse"){
+		// 		approachHeading.style.bottom = "0px";
+		// 		programmeHeading.style.bottom = "0px";
+		// 		impactHeading.style.bottom = "0px";
+		// 		faqHeading.style.bottom = "0px";
+		// 		usHeading.style.bottom = "0px";
+		// 		menu.innerHTML = "spread";
+		// 	}
+		// 	else{
+		// 		approachHeading.style.bottom = "160px";
+		// 		programmeHeading.style.bottom = "120px";
+		// 		impactHeading.style.bottom = "80px";
+		// 		faqHeading.style.bottom = "40px";
+		// 		usHeading.style.bottom = "0px";
+		// 		menu.innerHTML = "collapse";
+		// 	}
+		// }
 		function showAnswer(ansid){
 			if(ansid.style.display == "block"){
 				ansid.style.display = "none";
