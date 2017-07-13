@@ -50,10 +50,7 @@ div.section {
 	box-sizing: border-box;
 	max-width: 675px;
 	display: block;
-	
 	padding: 15px;
-	
-	
 	margin-left: 50vw;
 	margin-right: 15px;
 	/*box-shadow: 0px -2px 2px 2px rgba(0, 0, 0, 0.1);*/
@@ -121,34 +118,29 @@ a{
 	font-family: 'Fenix', serif;
 	font-size: 15px;
 	letter-spacing: 0px;
-	/*line-height: 1;*/
+	line-height: 1;
 	background-color: #EAEAEA;
 
 }
 
+nav{
+	position: fixed;
+	bottom: 0px;
+	left:0px;
+	width:100%;
+	background-color: #FAFAFA;
+	opacity: 0.9;
+	margin:0px;
+	box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+}
 
-footer p.contact{
-	columns: 1;
+nav p.menu{
 	font-family: 'Fenix', serif;
 	font-size: 13px;
 	text-align: center;
 	padding: 15px;
 	margin: 0px;
 	font-weight: lighter;
-}
-
-
-
-
-
-nav{
-	position:fixed;
-	top:0px;
-	display: block;
-	background-color: #FAFAFA;
-	width: 100%;
-	/*opacity: 0.9;*/
-	
 }
 
 ul{
@@ -161,60 +153,25 @@ ul li{
 	font-size: 15px;
 }
 
-a.contact{
-	padding: 30px;
-	float:left;
-	transition: padding 2s;
+footer{
+	width:100%;
+	background-color: #FAFAFA;
+	margin:0px;
+}
+p.contact{
+	font-family: 'Fenix', serif;
+	font-size: 13px;
+	text-align: center;
+	padding: 15px;
+	margin: 0px;
+	font-weight: lighter;
+	background-color: #FAFAFA;
 }
 
 
 ul li:hover, ul li:active {
 	background-color: #EFEFEF;
 }
-
-footer{
-	position: fixed;
-	bottom: 0px;
-	left:0px;
-	width:100%;
-	background-color: #FAFAFA;
-	opacity: 0.9;
-	margin:0px;
-	box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
-}
-
-h1{
-	display: block;
-	margin-right: 15px;
-	margin-bottom: 15px;
-	margin-top: 30px;
-	margin-left: 15px;
-	padding-top: 45px;
-	font-family: 'Titillium Web', sans-serif;;
-	color: #662853;
-	font-size: 22px;
-	font-weight: lighter;
-	letter-spacing: 0px;
-	line-height: 2.0;
-	vertical-align: top;
-}
-/*a.fa-envelope {
-    background: #FAFAFA;
-    color: #AFAFAF;
-    width:45px;
-    margin:auto;
-    float:none;
-    padding:15px;
-    
-}
-div.icons{
-	width: 100%;
-	margin:auto;
-	overflow: hidden;
-	text-align: center;
-}*/
-
-
 
 table{
 	display: block;
@@ -254,7 +211,6 @@ td{
 	header{
 		top: 15px;
 	}
-
 }
 @media screen and (max-width: 705px){
 	div.section{
@@ -266,14 +222,4 @@ td{
 	div.approach, div.programme, div.impact, div.faq, div.us{
 		margin-left: 15px;
 	}
-
-/*	p.intro{
-		margin-left:30px;
-	}*/
-/*	p.The_Programme{
-		margin-left:30px;
-	}*/
-	/*div.welcome{
-		display: none;
-	}*/
 }

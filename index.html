@@ -35,7 +35,7 @@
 	</div>
 
 	<div id="approach" class="anchorSpace"></div>
-	<div class="approach">
+	<div id="approachHeading" class="approach">
 		<a class="approach" href="#approach">Our Approach</a>
 	</div>
 		
@@ -48,7 +48,7 @@
 	</div>
 
 	<div id="programme" class="anchorSpace"></div>
-	<div class="programme">
+	<div id="programmeHeading" class="programme">
 		<a class="programme" href="#programme">The Programme</a>
 	</div>
 
@@ -69,7 +69,7 @@
 	</div>
 
 	<div id="impact" class="anchorSpace"></div>
-	<div class="impact">
+	<div id="impactHeading" class="impact">
 		<a class="impact" href="#impact">Impact</a>
 	</div>
 
@@ -82,7 +82,7 @@
 	</div>
 
 	<div id="faq" class="anchorSpace"></div>
-	<div class="faq">
+	<div id="faqHeading" class="faq">
 		<a class="faq" href="#faq">FAQ</a>
 	</div>
 
@@ -146,31 +146,52 @@
 	</div>
 
 	<div id="us" class="anchorSpace"></div>
-	<div class="us">
+	<div id="usHeading" class="us">
 		<a class="us" href="#us">About Us</a>
 	</div>
 
 	<div class="section">
 		<p class="us">
 		<br>
-			At the end of our programme, we believe students will better understand their process of thinking, and appreciate how that understanding can be used to think incisively in different situations. This will equip students to interface with argumentation faster and more accurately, making them more comfortable with both explaining themselves and responding to the views of others.<br><br>
-			This has direct implications for students’ academic lives. In the short term, this translates to greater efficiency in reading to identify the specific answers for questions, and clearer written responses; this is of particular use when faced with unfamiliar questions, in examinations or otherwise. In the long term this will help students adapt to the challenging intellectual environment of higher education, especially in universities abroad, where such thinking is demanded as a matter of course.
+			<b>thinkinwords_</b> is Apoorv Avram and Aditya Sarin. Most recently, we were both teaching undergraduates at Ashoka University how to write academically, with a view to improving their academic thinking abilities. Between us we have worked with over 250 of Ashoka University’s undergraduates in over 700 individual sessions.<br><br>
+			<b>Apoorv Avram</b> studied at Sardar Patel Vidyalaya and St. Stephen’s College, and is currently pursuing an MA in Education from the Tata Institute of Social Sciences. He has taught high school students at the Mallya Aditi International School and trained the debate teams at Sardar Patel Vidyalaya, the Vasant Valley School, and the Mallya Aditi International School.<br><br>
+			<b>Aditya Sarin</b> studied at The Shri Ram School and Ramjas College, and has an MA in English with an interdisciplinary focus from the Manipal Centre for Philosophy and Humanities. He has taught high school students at The Shri Ram School and Gems International School; edited textbooks for Frank Educational Aids and Good Luck Publishers; trained teachers at DPS Abohar for Kunskapsskolan; and designed, run, and taught at academic internships for undergraduates from across the country.<br><br>
+			Our combined disciplinary expertise underpins our research interest in the pedagogy of thought, and we intend to bring to this programme a composite of some of the most rigorously tested and academically exciting work from around the world on teaching thinking to students.
 		</p>
 	</div>
 
 	<div class="anchorSpace"></div>
 
-
 	<footer>
-		<p class="contact">contact@thinkinwords.org</p>
-<!-- 		<div class="icons">
-		<a href="mailto:contact@thinkinwords.org" class="fa fa-envelope"></a>
-		</div> -->
- 	</footer>
+		<p id="contact" class="contact">contact@thinkinwords.org</p>
+	</footer>
+	<div class="anchorSpace"></div>
+
+	<nav>
+		<p id="menu" class="menu" onclick="collapse()">collapse</p>
+ 	</nav>
 
 
 	<script>
-
+		function collapse() {
+		
+			if(menu.innerHTML == "collapse"){
+				approachHeading.style.bottom = "40px";
+				programmeHeading.style.bottom = "40px";
+				impactHeading.style.bottom = "40px";
+				faqHeading.style.bottom = "40px";
+				usHeading.style.bottom = "40px";
+				menu.innerHTML = "spread";
+			}
+			else{
+				approachHeading.style.bottom = "200px";
+				programmeHeading.style.bottom = "160px";
+				impactHeading.style.bottom = "120px";
+				faqHeading.style.bottom = "80px";
+				usHeading.style.bottom = "40px";
+				menu.innerHTML = "collapse";
+			}
+		}
 		function showAnswer(ansid){
 			if(ansid.style.display == "block"){
 				ansid.style.display = "none";
