@@ -81,22 +81,22 @@ div.approach, div.programme, div.impact, div.faq, div.us {
 	margin-left: 50vw;
 	margin-right: 15px;
 	/*box-shadow: 0px -2px 2px 2px rgba(0, 0, 0, 0.1);*/
-	background-color: #EAEAEA;
+	background-color: #00AAAA;
 }
 div.approach{
-	bottom:200px;
-}
-div.programme{
-	bottom:160px;
-}
-div.impact{
 	bottom:120px;
 }
+div.programme{
+	bottom:90px;
+}
+div.impact{
+	bottom:60px;
+}
 div.faq{
-	bottom:80px;
+	bottom:30px;
 }
 div.us{
-	bottom:40px;
+	bottom:0px;
 }
 
 p{	
@@ -112,14 +112,14 @@ p{
 a{
 	display: block;
 	box-sizing: border-box;
-	color: #555555;
-	font-weight: bold;
+	color: #FAFAFA;
+	font-weight: lighter;
 	text-decoration: none;
 	font-family: 'Fenix', serif;
-	font-size: 15px;
+	font-size: 13px;
 	letter-spacing: 0px;
 	line-height: 1;
-	background-color: #EAEAEA;
+	background-color: #00AAAA;
 
 }
 
