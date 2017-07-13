@@ -1,19 +1,20 @@
 html{
 	height:100%;
 	width: 100%;
-	background-color: #DDDDDD;
+	background-color: #FAFAFA;
+
+
+
 	/*-webkit-tap-highlight-color: rgba(0, 0, 0, 0);*/
 }
 body{
 	box-sizing: border-box;
-	position: fixed;
-	margin: 0px;
-	padding:0px;
+	margin: 1px;
+	padding:1px;
 	width: 100%;
-	background-color: #FAFAFA;
-	overflow: hidden;
-	height: 100%;
-	
+	background-color: rgba(1.0,1.0,1.0,0.0);
+	min-height: 100%
+
 }
 header{
 	position: fixed;
@@ -22,6 +23,11 @@ header{
 	height:100vh;
 	box-sizing: border-box;
 	transition: top 2s, left 2s;
+	z-index: -1;
+}
+@keyframes cursorBlink {
+    from {color: #FAFAFA;}
+    to {color: #444444;}
 }
 p.cursor, p.tiw{
 	display:inline-block;
@@ -32,70 +38,94 @@ p.cursor, p.tiw{
 	letter-spacing: 7px;
 	padding:0px;
 	margin:0px;
+	background-color: #FAFAFA;
+
 }
 p.cursor{
 	animation-name: cursorBlink;
     animation-duration: 1s;
     animation-iteration-count: infinite;
 }
-div.section{
-	box-sizing: border-box;
-	display: block;
-	position: absolute;
-	top:  calc(100% - 105px);
-	left:50vw;
-	width: calc(50vw + 20px);
-	height: 100%;
-	padding: 15px;
-	padding-bottom: 0px;
-	margin-left:0px;
-	/*margin-top: 50vh;*/
-	margin-right:0px;
-	
-	background-color: rgba(1.0,1.0,1.0,0.0);
-
-	/*float:right;*/
-	overflow-y: hidden;
-	overflow-x: hidden;
-	transition: top 1.0s;
-	z-index: 0;
-}
-div.section:target{
-	top:75px;
-	transition: top 1.0s;
-	z-index: -1;
-	overflow-y:scroll;
-	padding-bottom: 135px;
-
-}
-div.card{
+div.section {
 	box-sizing: border-box;
 	max-width: 675px;
 	display: block;
-	box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
-	padding: 15px;
-	margin-bottom: 135px;
-	overflow:hidden;
-	background-color: #FAFAFA;
 	
+	padding: 15px;
+	
+	
+	margin-left: 50vw;
+	margin-right: 15px;
+	/*box-shadow: 0px -2px 2px 2px rgba(0, 0, 0, 0.1);*/
+	background-color: #EFEFEF;
 }
+div.anchorSpace{
+	box-sizing: border-box;
+	max-width: 675px;
+	display: block;
+	padding: 15px;
+	margin-bottom: 0px;
+	margin-left: 50vw;
+	margin-right: 15px;
+	margin-bottom: 50vh;
+	background-color: #00FAFF;
+	overflow-x: hidden;
+}
+div.approach, div.programme, div.impact, div.faq, div.us {
+	box-sizing: border-box;
+	max-width: 675px;
+	display: block;
+	position: sticky;
+	top:0px;
+	padding: 15px;
+	margin-bottom: 0px;
+	margin-left: 50vw;
+	margin-right: 15px;
+	/*box-shadow: 0px -2px 2px 2px rgba(0, 0, 0, 0.1);*/
+	background-color: #EAEAEA;
+	overflow-x: hidden;
+}
+div.approach{
+	bottom:200px;
+}
+div.programme{
+	bottom:160px;
+}
+div.impact{
+	bottom:120px;
+}
+div.faq{
+	bottom:80px;
+}
+div.us{
+	bottom:40px;
+}
+
 p{	
 	box-sizing: border-box;
 	color: #444444;
-	background-color: #FAFAFA;
+	background-color: #EFEFEF;
 	font-family: 'Titillium Web', sans-serif;
-	max-width: 675px;
+	font-size: 15px;
+	max-width: 100%;
 	margin: 0px;
 	padding: 0px;
 }
-
-p.details{
-	font-size: 15px;
-	columns: 1;
-	text-align: center;
-	padding-top: 60px;
+a{
+	display: block;
+	box-sizing: border-box;
+	color: #555555;
 	font-weight: bold;
+	text-decoration: none;
+	font-family: 'Fenix', serif;
+	font-size: 15px;
+	letter-spacing: 0px;
+	/*line-height: 1;*/
+	background-color: #EAEAEA;
+
 }
+
+
 footer p.contact{
 	columns: 1;
 	font-family: 'Fenix', serif;
@@ -106,10 +136,7 @@ footer p.contact{
 	font-weight: lighter;
 }
 
-@keyframes cursorBlink {
-    from {color: #FAFAFA;}
-    to {color: #444444;}
-}
+
 
 
 
@@ -120,43 +147,25 @@ nav{
 	background-color: #FAFAFA;
 	width: 100%;
 	/*opacity: 0.9;*/
-	/*box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);*/
+	
 }
 
 ul{
-	list-style-type: none;
-	margin: 0px;
-	padding: 0px;
-	overflow: hidden;
-	float:right;
+	/*list-style-type: none;*/
 }
 ul li{
-	float: left;
-}
-a{
-	display: block;
-	box-sizing: border-box;
 	color: #444444;
-	text-decoration: none;
-	font-family: 'Fenix', serif;
+	background-color: #EFEFEF;
+	font-family: 'Titillium Web', sans-serif;
 	font-size: 15px;
-	letter-spacing: 0px;
-	line-height: 1;
-	background-color: #FAFAFA;
-
 }
+
 a.contact{
 	padding: 30px;
 	float:left;
 	transition: padding 2s;
 }
-a.introHeading, a.programmeHeading{
-	margin: 15px;
-	padding: 15px;
-	position: absolute;
-	top:0px;
-	top:0px;
-}
+
 
 ul li:hover, ul li:active {
 	background-color: #EFEFEF;
@@ -233,25 +242,28 @@ td{
 }
 @media screen and (max-width: 1380px){
 	div.section{
-		width: calc(705px + 20px);
-		/*margin-top: 75px;*/
-		left:auto;
-		right:-20px;
+		margin-left: auto;
+	}
+	div.anchorSpace{
+		margin-left: auto;
+	}
+	div.approach, div.programme, div.impact, div.faq, div.us{
+		margin-left: auto;
 	}
 	header{
 		top: 15px;
-		left: 15px;
 	}
-	a{
-		/*padding:15px;*/
-	}
+
 }
 @media screen and (max-width: 705px){
 	div.section{
-		width: calc(100% + 20px);
+		margin-left: 15px;
 	}
-	div.card{
-		max-width:100vw;
+	div.anchorSpace{
+		margin-left: 15px;
+	}
+	div.approach, div.programme, div.impact, div.faq, div.us{
+		margin-left: 15px;
 	}
 
 /*	p.intro{
