@@ -60,22 +60,21 @@ div.parallax {
 }
 p.cursor, p.tiw{
 	display:inline-block;
-	vertical-align: top;
 	color: #444444;
 	font-family: 'Fenix', serif;
-	font-size: 5vw;
-	letter-spacing: 7px;
+	letter-spacing: 2px; 
 	padding:0px;
 	margin:0px;
 	background-color: transparent;
 
 }
 p.cursor{
+	font-size: 6vw;
 	animation-name: cursorBlink;
     animation-duration: 1s;
     animation-iteration-count: infinite;
 }
-div.LFC{
+div.LSC{
 	box-sizing: border-box;
 	position: sticky;
 	z-index: -2;
@@ -89,7 +88,7 @@ div.LFC{
 	border-right-width: 2px;
 	border-right-color: #444444;*/
 }
-p.LFC{
+p.LSC{
 	font-family: 'Noto Serif', serif;
 	font-size: 30px;
 	text-align: right;
@@ -119,6 +118,7 @@ div.anchorSpace{
 }
 
 p{	
+	display: inline;
 	box-sizing: border-box;
 	color: #444444;
 	background-color: transparent;
@@ -148,7 +148,7 @@ h1{
 	color: #444444;
 	font-weight: lighter;
 	font-family: 'Fenix', serif;
-	font-size: 15px;
+	font-size: 20px;
 	letter-spacing: 0px;
 	line-height: 1;
 	background-color: transparent;
@@ -199,7 +199,7 @@ ul.menu li{
 }
 
 ul.programme{
-	/*list-style-type: none;*/
+	list-style-type: square;
 }
 ul.programme li{
 	color: #444444;
@@ -214,6 +214,7 @@ footer{
 	margin:0px;
 }
 p.contact{
+	display: block;
 	font-family: 'Fenix', serif;
 	font-size: 13px;
 	text-align: center;
@@ -223,9 +224,9 @@ p.contact{
 }
 
 
-/*ul li:hover, ul li:active {
-	background-color: #EFEFEF;
-}*/
+ul.menu li:hover, ul.menu li:active {
+	background-color: #00AAAA;
+}
 
 table{
 	display: block;
@@ -265,7 +266,7 @@ td{
 	header{
 		top: 15px;
 	}
-	div.LFC{
+	div.LSC{
 		box-sizing: border-box;
 		position: sticky;
 		z-index: -2;
@@ -304,7 +305,7 @@ td{
 	ul.menu li{
 		float: none;
 	}
-	div.LFC{
+	div.LSC{
 		position: static;
 		z-index: -2;
 		width:100%;
