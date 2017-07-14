@@ -11,7 +11,7 @@
 </head>
 
 <body>
- 	
+ 	<div class="backgroundRight"></div>
 	<header><p class="tiw">thinkinwords</p><p class="cursor">_</p></header>
 
 	<div id="intro" class="anchorSpace"></div>
@@ -25,11 +25,9 @@
 	</div>
 
 	<div id="approach" class="anchorSpace"></div>
-	<div id="approachHeading" class="approach">
-		<a class="approach" href="#approach">Our Approach</a>
-	</div>
 		
 	<div id="section" class="section">
+		<h1>Our Approach</h1>
 		<p class="approach">
 			<br>
 			Our programme foregrounds the emergent knowledge generated through intensive collaboration: the classroom community can understand together what no one member would have managed on their own. While we will be facilitating and monitoring during the sessions, our pedagogy is non-didactic by design, so as to let students learn through participation. Since classroom discussions do not always involve every student equally, our programme will work to accommodate different levels of comfort with discussion by ensuring the classroom community adjusts to provide every student meaningful opportunity to engage. This, crucially, allows students to create a metacognitive understanding on their own terms.<br><br>
@@ -38,11 +36,8 @@
 	</div>
 
 	<div id="programme" class="anchorSpace"></div>
-	<div id="programmeHeading" class="programme">
-		<a class="programme" href="#programme">The Programme</a>
-	</div>
-
 	<div id="section" class="section">
+		<h1>The Programme</h1>
 		<p class="programme">
 		<br>
 			The objective of the programme is to develop the intuitive grasp of reasoning and engagement that students already have into a more explicit and precise set of tools. Specifically, the curriculum aims to address four major tool-sets with overlapping concerns: </p>
@@ -59,11 +54,8 @@
 	</div>
 
 	<div id="impact" class="anchorSpace"></div>
-	<div id="impactHeading" class="impact">
-		<a class="impact" href="#impact">Impact</a>
-	</div>
-
 	<div id="section" class="section">
+		<h1>Impact</h1>
 		<p class="Impact">
 		<br>
 			At the end of our programme, we believe students will better understand their process of thinking, and appreciate how that understanding can be used to think incisively in different situations. This will equip students to interface with argumentation faster and more accurately, making them more comfortable with both explaining themselves and responding to the views of others.<br><br>
@@ -72,11 +64,8 @@
 	</div>
 
 	<div id="faq" class="anchorSpace"></div>
-	<div id="faqHeading" class="faq">
-		<a class="faq" href="#faq">FAQ</a>
-	</div>
-
 	<div class="section">
+		<h1>FAQ</h1>
 		<table id="Faq">
 			<tr>
 				<th id="q1" onclick="showAnswer(a1)">Q1: Aren’t schools already doing this? Why not do this from within the school framework?</th>
@@ -136,11 +125,8 @@
 	</div>
 
 	<div id="us" class="anchorSpace"></div>
-	<div id="usHeading" class="us">
-		<a class="us" href="#us">About Us</a>
-	</div>
-
 	<div class="section">
+		<h1>About Us</h1>
 		<p class="us">
 		<br>
 			<b>thinkinwords_</b> is Apoorv Avram and Aditya Sarin. Most recently, we were both teaching undergraduates at Ashoka University how to write academically, with a view to improving their academic thinking abilities. Between us we have worked with over 250 of Ashoka University’s undergraduates in over 700 individual sessions.<br><br>
@@ -165,14 +151,35 @@
 			<li><a onclick="hideMenu()" href="#faq">FAQ</a></li>
 			<li><a onclick="hideMenu()" href="#us">About Us</a></li>
 		</ul>
-		<button onclick="dropdown()">Menu</button>
+		<button id="menuButton" onclick="dropdown()">Menu</button>
 	</nav>
 
 
 
 	<script>
+
+
+		if (matchMedia) {
+			var pageWidth = window.matchMedia("(min-width: 705px)");
+			pageWidth.addListener(WidthChange);
+			WidthChange(pageWidth);
+		}
+
+		function WidthChange(pageWidth){
+			if (pageWidth.matches) {
+				menu.style.display = "block";
+				menuButton.style.display = "none";
+			}
+			else {
+				menu.style.display = "none";
+				menuButton.style.display = "block";
+			}
+		}
+
 		function hideMenu() {
-			menu.style.display = "none";
+			if (!pageWidth.matches) {
+				menu.style.display = "none";
+			}
 		}
 		function dropdown() {
 			if(menu.style.display == "block"){
@@ -182,24 +189,7 @@
 				menu.style.display = "block";
 			}
 		}
-		// function collapse() {
-		// 	if(menu.innerHTML == "collapse"){
-		// 		approachHeading.style.bottom = "0px";
-		// 		programmeHeading.style.bottom = "0px";
-		// 		impactHeading.style.bottom = "0px";
-		// 		faqHeading.style.bottom = "0px";
-		// 		usHeading.style.bottom = "0px";
-		// 		menu.innerHTML = "spread";
-		// 	}
-		// 	else{
-		// 		approachHeading.style.bottom = "160px";
-		// 		programmeHeading.style.bottom = "120px";
-		// 		impactHeading.style.bottom = "80px";
-		// 		faqHeading.style.bottom = "40px";
-		// 		usHeading.style.bottom = "0px";
-		// 		menu.innerHTML = "collapse";
-		// 	}
-		// }
+
 		function showAnswer(ansid){
 			if(ansid.style.display == "block"){
 				ansid.style.display = "none";
