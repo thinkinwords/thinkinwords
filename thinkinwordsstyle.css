@@ -81,7 +81,8 @@ div.LFC{
 	z-index: -2;
 	width:50%;
 	padding-left: 30px;
-	top: 40%;
+	top: calc(40% - 10vh);
+	padding-top: 10vh;
 	padding-bottom: 100px;
 	background-color: #FAFAFA;
 /*	border-right-style: solid;
@@ -106,17 +107,16 @@ div.section {
 	margin-right: 15px;
 	box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1);
 	background-color: #FAFAFA;
-	transform: translateZ(-1000px);
 }
 div.anchorSpace{
 	box-sizing: border-box;
-	max-width: 675px;
+	max-width: 100%;
+	height:20vh;
 	display: block;
 	padding: 15px;
 	margin-bottom: 0px;
-	margin-left: 50vw;
-	margin-right: 15px;
-	margin-bottom: 50vh;
+	margin-left: 0px;
+	margin-top: 10vh;
 	background-color: transparent;
 }
 
