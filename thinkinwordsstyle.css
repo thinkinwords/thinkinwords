@@ -30,6 +30,9 @@ div.backgroundLeft{
 	left:0px;
 	height: 40%;
 	width: 50%;
+	background: -webkit-linear-gradient(0deg, transparent, #FAFAFA 10%);
+	background: -o-linear-gradient(0deg, transparent, #FAFAFA 10%);
+	background: -moz-linear-gradient(0deg, transparent, #FAFAFA 10%);
 	background: linear-gradient(0deg, transparent, #FAFAFA 10%);
 	z-index: -1;
 }
