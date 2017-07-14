@@ -62,11 +62,19 @@ p.cursor, p.tiw{
 	display:inline-block;
 	color: #444444;
 	font-family: 'Fenix', serif;
-	letter-spacing: 2px; 
 	padding:0px;
 	margin:0px;
 	background-color: transparent;
-
+}
+p.tiwHeading{
+	display:inline-block;
+	color: #444444;
+	font-family: 'Fenix', serif;
+	letter-spacing: 2px;
+	font-size: 6vw;
+	padding:0px;
+	margin:0px;
+	background-color: transparent;
 }
 p.cursor{
 	font-size: 6vw;
@@ -313,6 +321,13 @@ td{
 		padding-top: 10vh;
 		padding-bottom: 100px;
 		background-color: #FAFAFA;
+	}
+	p.tiwHeading{
+		letter-spacing: 1px;
+		font-size: 9vw;
+	}
+	p.cursor{
+		font-size: 9vw;
 	}
 }
 }
