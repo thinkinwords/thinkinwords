@@ -105,10 +105,7 @@ p.LSC{
 	font-size: 30px;
 	text-align: right;
 	margin-right: 5vw;
-	/*margin-top: 2px;*/
-	/*line-height: 1;*/
 	display: block;
-
 }
 div.section {
 	box-sizing: border-box;
@@ -301,6 +298,13 @@ td{
 	div.section{
 		margin-left: 15px;
 		padding-top: 50vh;
+	}
+	p.LSC{
+	
+		font-size: 25px;
+	
+	
+	
 	}
 	div.anchorSpace{
 		margin-left: 15px;
