@@ -92,18 +92,22 @@ div.LSC{
 	z-index: -2;
 	width:50%;
 	padding-left: 30px;
-	top: calc(40% - 0vh);
+	top: calc(40% + 10px);
 	padding-top: 0vh;
 	padding-bottom: 70px;
 	background-color: #FAFAFA;
-
 }
 p.LSC{
 	font-family: 'Noto Serif', serif;
 	font-size: 30px;
 	text-align: right;
 	margin-right: 5vw;
+	margin-top: 2px;
+	line-height: 1;
 	display: block;
+	border-top: solid;
+	border-width: 1px;
+	border-color: #AAAAAA;
 }
 div.section {
 	box-sizing: border-box;
