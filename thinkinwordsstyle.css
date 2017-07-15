@@ -247,7 +247,7 @@ p.contact{
 	font-size: 13px;
 	text-align: center;
 	padding: 150px;
-	margin: 0px;
+	margin: auto;
 	background-color: transparent;
 }
 
@@ -325,7 +325,7 @@ td{
 	div.LSC{
 		width:100%;
 		top: 10vh;
-		padding-top: 10vh;
+		padding-top: 5vh;
 	}
 	p.tiwHeading{
 		letter-spacing: 1px;
