@@ -105,7 +105,7 @@ p.LSC{
 	text-align: right;
 	margin-right: 5vw;
 	margin-top: 2px;
-	line-height: 1;
+	/*line-height: 1;*/
 	display: block;
 
 }
