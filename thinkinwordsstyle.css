@@ -40,7 +40,7 @@ div.backgroundLeft{
 header{
 	position: fixed;
 	left:30px;
-	top:30vh;
+	top:20vh;
 	height:100vh;
 	box-sizing: border-box;
 	transition: top 2s, left 2s;
@@ -91,10 +91,11 @@ div.LSC{
   	position: -o-sticky;
 	z-index: -2;
 	width:50%;
+	height: 300px;
 	padding-left: 30px;
-	top: calc(40vh);
-	padding-bottom: 70px;
+	top: calc(30vh);
 	background-color: #FAFAFA;
+	margin-bottom: -300px;
 	/*border-top: solid;
 	border-width: 1px;
 	border-color: #AAAAAA;*/
@@ -104,7 +105,7 @@ p.LSC{
 	font-size: 30px;
 	text-align: right;
 	margin-right: 5vw;
-	margin-top: 2px;
+	/*margin-top: 2px;*/
 	/*line-height: 1;*/
 	display: block;
 
@@ -112,23 +113,36 @@ p.LSC{
 div.section {
 	box-sizing: border-box;
 	max-width: 675px;
+	min-height: 100vh;
 	display: block;
-	padding: 15px;
 	margin-left: 50vw;
 	margin-right: 15px;
+	margin-bottom: 0vh;
+	padding-top: 20vh;
+	background-color: transparent;
+	/*background-color: rgba(255,0,0,0.2);*/
+}
+
+div.card {
+	box-sizing: border-box;
+	max-width: 100%;
+	display: block;
+	padding: 15px;
 	box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1);
 	background-color: #FAFAFA;
 }
+
 div.anchorSpace{
+	content = "";
 	box-sizing: border-box;
 	max-width: 100%;
-	height:20vh;
+	height:0vh;
 	display: block;
-	padding: 15px;
-	margin-bottom: 0px;
+	
+	margin-bottom: 0vh;
 	margin-left: 0px;
-	margin-top: 10vh;
-	background-color: transparent;
+	margin-top: 0vh;
+	background-color: #transparent;
 }
 
 p{	
@@ -271,6 +285,7 @@ td{
 @media screen and (max-width: 1380px){
 	div.section{
 		margin-left: auto;
+		padding-top: 30vh;
 	}
 	div.anchorSpace{
 		margin-left: auto;
@@ -281,17 +296,11 @@ td{
 	header{
 		top: 15px;
 	}
-	div.LSC{
-		top: 20vh;
-		padding-bottom: 100px;
-	}
-	div.backgroundLeft{
-		height: 20%;
-	}
 }
 @media screen and (max-width: 705px){
 	div.section{
 		margin-left: 15px;
+		padding-top: 50vh;
 	}
 	div.anchorSpace{
 		margin-left: 15px;
@@ -316,7 +325,7 @@ td{
 	div.LSC{
 		width:100%;
 		top: 10vh;
-		padding-bottom: 100px;
+		padding-top: 10vh;
 	}
 	p.tiwHeading{
 		letter-spacing: 1px;
@@ -324,9 +333,6 @@ td{
 	}
 	p.cursor{
 		font-size: 10vw;
-	}
-	div.anchorSpace{
-		height:10vh;
 	}
 }
 }
