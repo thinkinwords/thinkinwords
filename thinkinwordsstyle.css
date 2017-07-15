@@ -19,7 +19,7 @@ div.backgroundRight{
 	height: 100%;
 	width: 50%;
 	margin-left: 50%;
-	background-color: #FAFAFA;
+	background-color: #transparent;
 	z-index: -1;
 }
 div.backgroundLeft{
@@ -34,7 +34,7 @@ div.backgroundLeft{
 	background: -o-linear-gradient(0deg, transparent, #FAFAFA 10%);
 	background: -moz-linear-gradient(0deg, transparent, #FAFAFA 10%);
 	background: linear-gradient(0deg, transparent, #FAFAFA 10%);*/
-	background-color: #FAFAFA;
+	background-color: #transparent;
 	z-index: -1;
 }
 header{
@@ -85,6 +85,10 @@ p.cursor{
 div.LSC{
 	box-sizing: border-box;
 	position: sticky;
+	position: -webkit-sticky;
+  	position: -moz-sticky;
+  	position: -ms-sticky;
+  	position: -o-sticky;
 	z-index: -2;
 	width:50%;
 	padding-left: 30px;
@@ -92,9 +96,7 @@ div.LSC{
 	padding-top: 0vh;
 	padding-bottom: 70px;
 	background-color: #FAFAFA;
-/*	border-right-style: solid;
-	border-right-width: 2px;
-	border-right-color: #444444;*/
+
 }
 p.LSC{
 	font-family: 'Noto Serif', serif;
@@ -233,7 +235,8 @@ p.contact{
 
 
 ul.menu li:hover, ul.menu li:active {
-	background-color: #00AAAA;
+	/*background-color: #00AAAA;*/
+	box-shadow: -5px 2px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 table{
@@ -275,15 +278,9 @@ td{
 		top: 15px;
 	}
 	div.LSC{
-		box-sizing: border-box;
-		position: sticky;
-		z-index: -2;
-		width:50%;
-		padding-left: 30px;
 		top: 20%;
 		padding-top: 10vh;
 		padding-bottom: 100px;
-		background-color: #FAFAFA;
 	}
 	div.backgroundLeft{
 		height: 20%;
@@ -314,13 +311,10 @@ td{
 		float: none;
 	}
 	div.LSC{
-		position: static;
-		z-index: -2;
 		width:100%;
-		padding-left: 30px;
-		padding-top: 0vh;
+		top: 10%;
+		padding-top: 10vh;
 		padding-bottom: 100px;
-		background-color: #FAFAFA;
 	}
 	p.tiwHeading{
 		letter-spacing: 1px;
