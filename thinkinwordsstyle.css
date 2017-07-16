@@ -40,7 +40,7 @@ div.backgroundLeft{
 header{
 	position: fixed;
 	left:30px;
-	top:30vh;
+	top:25vh;
 	height:100vh;
 	box-sizing: border-box;
 	transition: top 2s, left 2s;
@@ -91,7 +91,7 @@ div.LSC{
 	width:50%;
 	height: 300px;
 	padding-left: 30px;
-	top: 40vh;
+	top: 35vh;
 	left: -100vh;
 	background-color: #FAFAFA;
 	margin-bottom: -300px;
@@ -121,7 +121,7 @@ div.section {
 	margin-left: 50vw;
 	margin-right: 15px;
 	margin-bottom: 0vh;
-	padding-top: 30vh;
+	padding-top: 25vh;
 	background-color: transparent;
 	/*background-color: rgba(255,0,0,0.2);*/
 }
