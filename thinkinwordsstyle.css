@@ -40,7 +40,7 @@ div.backgroundLeft{
 header{
 	position: fixed;
 	left:30px;
-	top:20vh;
+	top:30vh;
 	height:100vh;
 	box-sizing: border-box;
 	transition: top 2s, left 2s;
@@ -83,7 +83,6 @@ p.cursor{
     animation-iteration-count: infinite;
 }
 div.LSC{
-	visibility: hidden;
 	display: block;
 	box-sizing: border-box;
 	position: fixed;
@@ -92,8 +91,8 @@ div.LSC{
 	width:50%;
 	height: 300px;
 	padding-left: 30px;
-	top: 30vh;
-	left: -50%;
+	top: 40vh;
+	left: -100vh;
 	background-color: #FAFAFA;
 	margin-bottom: -300px;
 
@@ -103,9 +102,7 @@ div.LSC{
     transition: 0.5s all ease-out;
 }
 div.active{
-	top:30vh;
 	left:0px;
-	visibility: visible;
 	background-color: #FAFAFA;
 
 }
@@ -124,7 +121,7 @@ div.section {
 	margin-left: 50vw;
 	margin-right: 15px;
 	margin-bottom: 0vh;
-	padding-top: 20vh;
+	padding-top: 30vh;
 	background-color: transparent;
 	/*background-color: rgba(255,0,0,0.2);*/
 }
