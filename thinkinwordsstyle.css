@@ -168,6 +168,11 @@ a{
 	border-top-style: solid;
 	border-top-width: 4px; 
 	border-top-color: #FAFAFA;
+
+	-webkit-transition: .5s all ease-out;
+    -moz-transition: .5s all ease-out;
+    -ms-transition: .5s all ease-out;
+    transition: .5s all ease-out;
 }
 
 h1{
