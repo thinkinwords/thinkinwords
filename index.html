@@ -19,7 +19,7 @@
 
 
 	
-	<div class="LSC">
+	<div class="LSC" id="introLSC">
 		<p class="LSC">
 			<br>
 			A classroom that reasons <br>in ordinary language.
@@ -38,7 +38,7 @@
 	</div>
 
 	
-	<div class="LSC">
+	<div class="LSC" id="approachLSC">
 		<p class="LSC">
 			<br>
 			Reflexive, collaborative, and immersive.
@@ -57,7 +57,7 @@
 	</div>
 
 	
-	<div class="LSC">
+	<div class="LSC" id="programmeLSC">
 		<p class="LSC">
 			<br>
 			20 students.<br>
@@ -89,7 +89,7 @@
 	</div>
 
 	
-	<div class="LSC">
+	<div class="LSC" id="impactLSC">
 		<p class="LSC">
 			<br>
 			Comfort with and control over arguments.
@@ -108,7 +108,7 @@
 	</div>
 
 	
-	<div class="LSC">
+	<div class="LSC" id="faqLSC">
 		<p class="LSC">
 			<br>
 			"Why do it this way?"
@@ -178,7 +178,7 @@
 	</div>
 
 	
-	<div class="LSC">
+	<div class="LSC" id="usLSC">
 		<p class="LSC">
 			<br>
 			Training, research, and experience.
@@ -280,9 +280,9 @@
 		// 		});
 		// });
 
-		var lastId,
+		var lastId, id,
 		navMenu = $("#menu"),
-		
+
 		menuItems = navMenu.find("a"),
 
 		scrollItems = menuItems.map(function(){
@@ -312,17 +312,25 @@
 			});
 
 			cur = cur[cur.length-1];
-			var id = cur && cur.length ? cur[0].id : "";
+			 id = cur && cur.length ? cur[0].id : "";
 
- // document.getElementById("nx").innerHTML = id;
+  // document.getElementById("nx").innerHTML = id;
 
 		if (lastId !== id) {
 			lastId = id;
+
+			$(".active").removeClass("active");
+		
+			$("div").filter("[id='"+id+"LSC']").addClass("active");
 
 			menuItems
 			.parent().removeClass("active")
 			.end().filter("[href='#"+id+"']").parent().addClass("active");
 		}                   
+});
+
+$(document).ready(function() {
+    $(document).scrollTop(100);
 });
 	</script> 
 </body>

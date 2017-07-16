@@ -83,22 +83,31 @@ p.cursor{
     animation-iteration-count: infinite;
 }
 div.LSC{
+	visibility: hidden;
+	display: block;
 	box-sizing: border-box;
-	position: sticky;
-	position: -webkit-sticky;
-  	position: -moz-sticky;
-  	position: -ms-sticky;
-  	position: -o-sticky;
+	position: fixed;
+	top:0px;
 	z-index: -2;
 	width:50%;
 	height: 300px;
 	padding-left: 30px;
-	top: calc(30vh);
+	top: 30vh;
+	left: -50%;
 	background-color: #FAFAFA;
 	margin-bottom: -300px;
-	/*border-top: solid;
-	border-width: 1px;
-	border-color: #AAAAAA;*/
+
+	-webkit-transition: 0.5s all ease-out;
+    -moz-transition: 0.5s all ease-out;
+    -ms-transition: 0.5s all ease-out;
+    transition: 0.5s all ease-out;
+}
+div.active{
+	top:30vh;
+	left:0px;
+	visibility: visible;
+	background-color: #FAFAFA;
+
 }
 p.LSC{
 	font-family: 'Noto Serif', serif;
