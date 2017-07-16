@@ -11,7 +11,7 @@
 </head>
 
 <body>
-
+<!-- <p id="nx" style="position: fixed; color: black;"></p> -->
  	<div class="backgroundRight"></div>
  	<div class="backgroundLeft"></div>
 	<header><p class="tiwHeading" style="color: #00AAAA;">think</p><p class="tiwHeading">inwords</p><p class="cursor">_</p></header>
@@ -201,7 +201,6 @@
 	</div>
 
 
-	
 	<footer>
 		<p id="contact" class="contact">contact@thinkinwords.org</p>
 	</footer>
@@ -265,20 +264,65 @@
 				ansid.style.display = "block";
 			}
 		}
-		$(document).ready(function(){
+		// $(document).ready(function(){
  
-  			$("a").on('click', function(event) {
-				if (this.hash !== "") {
-  					event.preventDefault();
-  					var hash = this.hash;
-	    			$('html, body').animate({
-    					scrollTop: $(hash).offset().top
-  					}, 800, function(){
-				window.location.hash = hash;
-  					});
-				}
-				});
+  // 			$("a").on('click', function(event) {
+		// 		if (this.hash !== "") {
+  // 					event.preventDefault();
+  // 					var hash = this.hash;
+	 //    			$('html, body').animate({
+  //   					scrollTop: $(hash).offset().top
+  // 					}, 800, function(){
+		// 		window.location.hash = hash;
+  // 					});
+		// 		}
+		// 		});
+		// });
+
+		var lastId,
+		navMenu = $("#menu"),
+		
+		menuItems = navMenu.find("a"),
+
+		scrollItems = menuItems.map(function(){
+			var item = $($(this).attr("href"));
+			if (item.length) { return item; }
 		});
+
+
+		menuItems.click(function(e){
+			var href = $(this).attr("href"),
+			offsetTop = href === "#" ? 0 : $(href).offset().top + 1;
+			$('html, body').stop().animate({ 
+				scrollTop: offsetTop
+			}, 300);
+			e.preventDefault();
+		});
+
+
+		$(window).scroll(function(){
+
+			var fromTop = $(this).scrollTop();
+
+
+			var cur = scrollItems.map(function(){
+				if ($(this).offset().top < fromTop)
+					return this;
+			});
+
+			cur = cur[cur.length-1];
+			var id = cur && cur.length ? cur[0].id : "";
+
+ // document.getElementById("nx").innerHTML = id;
+
+		if (lastId !== id) {
+			lastId = id;
+
+			menuItems
+			.parent().removeClass("active")
+			.end().filter("[href='#"+id+"']").parent().addClass("active");
+		}                   
+});
 	</script> 
 </body>
 </html>
