@@ -153,7 +153,7 @@ p{
 	margin: 0px;
 	padding: 0px;
 }
-a{
+a.menuItem{
 	display: block;
 	box-sizing: border-box;
 	color: #444444;
@@ -254,9 +254,20 @@ p.contact{
 	font-size: 13px;
 	text-align: center;
 	padding-top: 150px;
-	padding-bottom: 150px;
+	padding-bottom: 30px;
 	margin: auto;
 	background-color: transparent;
+}
+a.contact{
+	width: 30px;
+	display: block;
+	margin:auto;
+	text-align: center;
+}
+i.fa{
+	padding-bottom: 150px;
+	margin: auto;
+	color: #00AAAA;
 }
 
 
@@ -264,7 +275,7 @@ p.contact{
 	background-color: #00AAAA;
 	box-shadow: -5px 2px 5px 0px rgba(0, 0, 0, 0.2);
 }*/
-a:hover{
+a.menuItem:hover{
 	color: #FAFAFA;
 	background-color: #00AAAA;
 	border-top-color: #00AAAA; 
@@ -302,10 +313,7 @@ td{
 	padding-bottom: 30px;
 	display: none;
 }
-i.fa{
-	padding-right: 15px;
-	color: #00AAAA;
-}
+
 @media screen and (max-width: 1380px){
 	div.section{
 		margin-left: auto;
