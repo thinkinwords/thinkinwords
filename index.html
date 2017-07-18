@@ -314,7 +314,10 @@
 			
 			id = cur[cur.length-1].attr("id");
 
-   document.getElementById("nx").innerHTML = cur[cur.length-1].attr("id");
+// $( window ).resize(function() {
+//    document.getElementById("nx").innerHTML = $(window).width();
+// });
+  
 
 		if (lastId !== id) {
 			lastId = id;

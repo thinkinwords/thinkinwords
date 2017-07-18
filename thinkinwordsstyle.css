@@ -83,7 +83,7 @@ p.LSC{
 }
 div.section {
 	box-sizing: border-box;
-	max-width: 675px;
+	max-width: 600px;
 	min-height: 100vh;
 	display: block;
 	margin-left: 50vw;
@@ -308,14 +308,14 @@ td{
 	
 		top: 10vh;
 		padding-top: 5vh;
-		width:675px;
+		width:600px;
 		left: 100vw;
 	}
 	div.active{
-		left: calc(100% - 675px);
+		left: calc(100% - 600px);
 	}
 }
-@media screen and (max-width: 705px){
+@media screen and (max-width: 630px){
 	div.section{
 		margin-left: 15px;
 		padding-top: 50vh;
