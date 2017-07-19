@@ -91,7 +91,7 @@ div.active{
 }
 i.fa{
 	display: inline;
-	color: #555555;
+	color: #00BBAA;
 	padding: 0px;
 	padding-right: 15px;
 	margin: 0px;
@@ -263,7 +263,7 @@ a.contact{
 i.fa{
 	padding-bottom: 150px;
 	margin: auto;
-	color: #555555;
+	color: #00BBAA;
 }
 
 
@@ -273,15 +273,15 @@ i.fa{
 }*/
 a.menuItem:hover{
 	color: #FAFAFA;
-	background-color: #444444;
-	border-top-color: #444444; 
+	background-color: #00BBAA;
+	border-top-color: #00BBAA; 
 	/*box-shadow: -3px 5px 5px 0px rgba(0, 0, 0, 0.2);*/
 }
 
 #menu li.active a {
 	color: #444444;
 	background-color: #FAFAFA;
-	border-top-color: #444444;
+	border-top-color: #00BBAA;
 /*	box-shadow: -3px 5px 5px 0px rgba(0, 0, 0, 0.2);*/
 }
 
@@ -383,6 +383,16 @@ td{
 	}
 	p.cursor{
 		font-size: 10vw;
+	}
+	#menu li.active a {
+	color: #FAFAFA;
+	background-color: #00BBAA;
+	border-top-color: #00BBAA;
+/*	box-shadow: -3px 5px 5px 0px rgba(0, 0, 0, 0.2);*/
+	}
+	#menu li.active > a {
+	color: #FAFAFA;
+
 	}
 }
 }
