@@ -272,17 +272,17 @@ i.fa{
 	box-shadow: -5px 2px 5px 0px rgba(0, 0, 0, 0.2);
 }*/
 a.menuItem:hover{
-	/*color: #FAFAFA;
-	background-color: #555555;
-	border-top-color: #555555; */
-	box-shadow: -3px 5px 5px 0px rgba(0, 0, 0, 0.2);
+	color: #FAFAFA;
+	background-color: #444444;
+	border-top-color: #444444; 
+	/*box-shadow: -3px 5px 5px 0px rgba(0, 0, 0, 0.2);*/
 }
 
 #menu li.active a {
-	/*color: #444444;
+	color: #444444;
 	background-color: #FAFAFA;
-	border-top-color: #555555;*/
-	box-shadow: -3px 5px 5px 0px rgba(0, 0, 0, 0.2);
+	border-top-color: #444444;
+/*	box-shadow: -3px 5px 5px 0px rgba(0, 0, 0, 0.2);*/
 }
 
 ul.fa-ul{
