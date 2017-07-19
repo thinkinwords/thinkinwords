@@ -247,9 +247,10 @@ a.contact{
 	display: block;
 	margin:auto;
 	text-align: center;
+	text-decoration: none;
 }
 i.fa{
-	padding-bottom: 30px;
+	padding-bottom: 150px;
 	margin: auto;
 	color: #00AAAA;
 }
