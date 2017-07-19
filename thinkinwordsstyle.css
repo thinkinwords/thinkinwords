@@ -81,7 +81,7 @@ div.active{
 }
 i.fa{
 	display: inline;
-	color: #00AAAA;
+	color: #555555;
 	padding: 0px;
 	padding-right: 15px;
 	margin: 0px;
@@ -253,25 +253,26 @@ a.contact{
 i.fa{
 	padding-bottom: 150px;
 	margin: auto;
-	color: #00AAAA;
+	color: #555555;
 }
 
 
 /*ul.menu li:hover, ul.menu li:active {
-	background-color: #00AAAA;
+	background-color: #555555;
 	box-shadow: -5px 2px 5px 0px rgba(0, 0, 0, 0.2);
 }*/
 a.menuItem:hover{
-	color: #FAFAFA;
-	background-color: #00AAAA;
-	border-top-color: #00AAAA; 
-	
+	/*color: #FAFAFA;
+	background-color: #555555;
+	border-top-color: #555555; */
+	box-shadow: -5px 5px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 #menu li.active a {
-	color: #444444;
+	/*color: #444444;
 	background-color: #FAFAFA;
-	border-top-color: #00AAAA; 
+	border-top-color: #555555;*/
+	box-shadow: -5px 5px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 ul.fa-ul{
@@ -292,7 +293,7 @@ ul.fa-ul li:nth-child(even){
 	display: none;
 }
 ul.fa-ul li:nth-child(odd){
-	color: #00AAAA;
+	color: #555555;
 }
 td{
 	vertical-align: top;
