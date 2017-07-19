@@ -1,11 +1,9 @@
 html{
 	height:100%;
 	width: 100%;
-/*	background-image: url("tile.png");
-    background-repeat: repeat;
-    background-attachment: fixed;
-*/
-    background: #FAFAFA;
+
+
+  /*  background: #FAFAFA;*/
 }
 body{
 	box-sizing: border-box;
@@ -14,6 +12,18 @@ body{
 	width: 100%;
 	background-color: transparent;
 	min-height: 100%
+
+}
+div.bg{
+		background-image: url("tile.png");
+    background-repeat: repeat;
+    background-attachment: fixed;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: -3;
 
 }
 header{
@@ -265,14 +275,14 @@ a.menuItem:hover{
 	/*color: #FAFAFA;
 	background-color: #555555;
 	border-top-color: #555555; */
-	box-shadow: -5px 5px 5px 0px rgba(0, 0, 0, 0.2);
+	box-shadow: -3px 5px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 #menu li.active a {
 	/*color: #444444;
 	background-color: #FAFAFA;
 	border-top-color: #555555;*/
-	box-shadow: -5px 5px 5px 0px rgba(0, 0, 0, 0.2);
+	box-shadow: -3px 5px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 ul.fa-ul{
