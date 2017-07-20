@@ -18,7 +18,9 @@
 
 <!-- 	<div id="popup" class="popup">contact@thinkinwords.org</div> -->
 
-	<a class="contact" href="mailto:contact@thinkinwords.org"><button id="contactButton" class="contact" onclick="popContactInfo()">Contact Us</button></a>
+<!-- 	<a class="contact" href="mailto:contact@thinkinwords.org"><button id="contactButton" class="contact" onclick="popContactInfo()">Contact Us</button></a> -->
+
+	<button id="contactButton" class="contactButton" onclick="popContactInfo()">Contact Us</button>
 
 	<div class="LSC" id="introLSC">
 		<p class="LSC">
@@ -306,6 +308,12 @@
 
 			var fromTop = $(this).scrollTop();
 
+			if(fromTop>2){
+				contactButton.style.display = "none";
+			}
+			else{
+				contactButton.style.display = "block";
+			}
 
 			var cur = scrollItems.map(function(){
 				if ($(this).offset().top < fromTop + $( window ).height()/2.0)
@@ -316,7 +324,7 @@
 			id = cur[cur.length-1].attr("id");
 
 // $( window ).resize(function() {
-//    document.getElementById("nx").innerHTML = $(window).width();
+   document.getElementById("nx").innerHTML = fromTop;
 // });
   
 
