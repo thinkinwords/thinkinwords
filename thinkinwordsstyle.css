@@ -310,6 +310,9 @@ button.contactButton{
 	display: block;
 	box-sizing: border-box;
 	position: fixed;
+	/*width: 10px;
+	height: 10px;*/
+	overflow:hidden;
 	top: calc(35vh + 180px);
 	right: 50vw;
 	margin-right: 5vw;
@@ -428,13 +431,9 @@ div.popup {
 	color: #FAFAFA;
 
 	}
-/*	button.contact{
-		top: auto;
-		left:auto;
-		bottom: 60px;
-		right: 0px;
-		width: calc(100% - 10px);
-		margin: 5px;
-	}*/
+	button.contactButton{
+		top: calc(15vh + 135px);
+		
+	}
 }
 }
