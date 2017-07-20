@@ -317,10 +317,14 @@
 			var fromTop = $(this).scrollTop();
 
 			if(fromTop>2){
-				contactButton.style.display = "none";
+				contactButton.style.color = "#transparent";
+				contactButton.style.background = "transparent";
+				contactButton.style.visibility = "hidden";
 			}
 			else{
-				contactButton.style.display = "block";
+				contactButton.style.color = "#FAFAFA";
+				contactButton.style.background = "#00BBAA";
+				contactButton.style.visibility = "visible";
 			}
 
 			var cur = scrollItems.map(function(){
