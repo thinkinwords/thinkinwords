@@ -16,9 +16,16 @@
 
 	<header><p class="tiwHeading" style="color: #00BBAA;">think</p><p class="tiwHeading">inwords</p><p class="cursor">_</p></header>
 
-<!-- 	<div id="popup" class="popup">contact@thinkinwords.org</div> -->
+	<div id="popup" class="popup">
+<!-- method="POST" action="http://formspree.io/contact@thinkinwords.org"  -->
+		<form autocomplete="off">
+		<!-- <h1>Contact Us</h1> -->
+  		<input type="email" name="email" placeholder="Your email">
+  		<textarea name="message" placeholder="Your message"></textarea>
+  		<button type="submit">Send Message</button>
+		</form>
+	</div>
 
-<!-- 	<a class="contact" href="mailto:contact@thinkinwords.org"><button id="contactButton" class="contact" onclick="popContactInfo()">Contact Us</button></a> -->
 
 	<button id="contactButton" class="contactButton" onclick="popContactInfo()">Contact Us</button>
 
@@ -261,12 +268,13 @@
 			}
 		}
 		function popContactInfo() {
-			if(contactButton.innerHTML == "Contact Us"){
-    			contactButton.innerHTML = "contact@thinkinwords.org";
-    		}
-    		else{
-    			contactButton.innerHTML = "Contact Us";	
-    		}
+			popup.style.display = "block";
+			// if(contactButton.innerHTML == "Contact Us"){
+   //  			contactButton.innerHTML = "contact@thinkinwords.org";
+   //  		}
+   //  		else{
+   //  			contactButton.innerHTML = "Contact Us";	
+   //  		}
 		}
 		// $(document).ready(function(){
  
