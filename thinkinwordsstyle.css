@@ -92,6 +92,7 @@ div.welcomeLine{
 	top: 35vh;
 	text-align: center;
 	padding-left: 30px;
+	padding-right: 30px;
 	background-color: transparent;
 	opacity: 1;
 	/*margin-bottom: -300px;*/
