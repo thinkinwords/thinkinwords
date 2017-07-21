@@ -235,8 +235,8 @@
 
  	<nav>
 		<ul id="menu" class="menu">
-			<li><a class="menuItem" onclick="hideMenu()" href="#home" style="display: none;">Home</a></li>
-			<li><a class="menuItem" onclick="hideMenu()" href="#intro">Intro</a></li>
+			<li><a class="menuItem" onclick="hideMenu()" href="#home" style="display: none;">landing</a></li>
+			<li><a class="menuItem" onclick="hideMenu()" href="#intro">Home</a></li>
 			<li><a class="menuItem" onclick="hideMenu()" href="#approach">Our Approach</a></li>
 			<li><a class="menuItem" onclick="hideMenu()" href="#programme">The Programme</a></li>
 			<li><a class="menuItem" onclick="hideMenu()" href="#impact">Impact</a></li>
@@ -295,6 +295,7 @@
 		}
 		function popContactInfo() {
 			popup.style.display = "block";
+			floatingContactButton.style.visibility = "hidden";
 			// if(contactButton.innerHTML == "Contact Us"){
    //  			contactButton.innerHTML = "contact@thinkinwords.org";
    //  		}

@@ -175,6 +175,9 @@ p{
 	margin: 0px;
 	padding: 0px;
 }
+a{
+	outline: 0;
+}
 a.menuItem{
 	display: block;
 	box-sizing: border-box;
