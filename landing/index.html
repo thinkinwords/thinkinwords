@@ -37,6 +37,11 @@
 
 
 	<button id="contactButton" class="contactButton" onclick="popContactInfo()">Contact Us</button>
+	
+		<a id="moreInfo" class="moreInfo" href="#intro">
+			<i id="moreArrow" class="fa fa-angle-down" aria-hidden="true"></i>
+		</a>
+	
 
 	<div class="LSC" id="introLSC">
 		<p class="LSC">
@@ -210,7 +215,7 @@
 
 	<footer>
 		<p id="contact" class="contact">contact@thinkinwords.org</p>
-		<a class="contact" href="mailto:contact@thinkinwords.org"><i class="fa fa-envelope"></i></a>
+		<!-- <a class="contact" href="mailto:contact@thinkinwords.org"><i class="fa fa-envelope"></i></a> -->
 	</footer>
 
 
@@ -285,21 +290,22 @@
     			contactButton.innerHTML = "Contact Us";	
     		}
 		}
-		// $(document).ready(function(){
- 
-  // 			$("a").on('click', function(event) {
-		// 		if (this.hash !== "") {
-  // 					event.preventDefault();
-  // 					var hash = this.hash;
-	 //    			$('html, body').animate({
-  //   					scrollTop: $(hash).offset().top
-  // 					}, 800, function(){
-		// 		window.location.hash = hash;
-  // 					});
-		// 		}
-		// 		});
-		// });
-		var inWelcome;
+
+		$(document).ready(function(){
+  			$("a").on('click', function(event) {
+				if (this.hash !== "") {
+  					event.preventDefault();
+  					var hash = this.hash;
+	    			$('html, body').animate({
+    					scrollTop: $(hash).offset().top
+  					}, 800, function(){
+				window.location.hash = hash;
+  					});
+				}
+				});
+		});
+
+		var inWelcome, headerWidth;
 		var lastId, id,
 		
 		navMenu = $("#menu"),
@@ -312,31 +318,27 @@
 		});
 
 
-		menuItems.click(function(e){
-			var href = $(this).attr("href"),
-			offsetTop = href === "#" ? 0 : $(href).offset().top + 1;
-			$('html, body').stop().animate({ 
-				scrollTop: offsetTop
-			}, 700);
-			e.preventDefault();
-		});
+		// menuItems.click(function(e){
+		// 	var href = $(this).attr("href"),
+		// 	offsetTop = href === "#" ? 0 : $(href).offset().top + 1;
+		// 	$('html, body').stop().animate({ 
+		// 		scrollTop: offsetTop
+		// 	}, 700);
+		// 	e.preventDefault();
+		// });
 
+
+		$( window ).resize(function() {
+			headerWidth = $( window ).width()/2.0 - $("#heading").width()/2.0;
+			if(id == "home"){
+				$("#heading").css("left",  headerWidth + "px");
+			}
+		   // document.getElementById("nx").innerHTML = $( window ).width()/2.0;
+		});
 
 		$(window).scroll(function(){
 
 			var fromTop = $(this).scrollTop();
-
-
-			if(fromTop > $( window ).height()/3.0){
-				contactButton.style.color = "#transparent";
-				contactButton.style.background = "transparent";
-				contactButton.style.visibility = "hidden";
-			}
-			else{
-				contactButton.style.color = "#FAFAFA";
-				contactButton.style.background = "#00BBAA";
-				contactButton.style.visibility = "visible";
-			}
 
 			var cur = scrollItems.map(function(){
 				if ($(this).offset().top < fromTop + $( window ).height()/2.0)
@@ -346,34 +348,44 @@
 			
 			id = cur[cur.length-1].attr("id");
 
+			headerWidth = $( window ).width()/2.0 - $("#heading").width()/2.0;
 
-// $( window ).resize(function() {
-   // document.getElementById("nx").innerHTML = id;
-// });
-  	if (id == "home"){
-  	welcomeLine.style.opacity = "1";
-  	welcomeLine.style.visibility = "visible";
-  	heading.style.transform = "translate(-50%,0px)";
-  	heading.style.left = "50%";
-  	}
-  	else{
-  	welcomeLine.style.opacity = "0";
-  	welcomeLine.style.visibility = "hidden";
-  	heading.style.transform = "translate(0px,0px)";
-  	heading.style.left = "30px";
-  	}
 
-		if (lastId !== id) {
-			lastId = id;
 
-			$(".active").removeClass("active");
-		
-			$("div").filter("[id='"+id+"LSC']").addClass("active");
+			if (id == "home"){
+			welcomeLine.style.opacity = "1";
+			welcomeLine.style.visibility = "visible";
+			// heading.style.transform = "translate(-50%,0px)";
+			$("#heading").css("left",  headerWidth + "px");
+					contactButton.style.color = "#FAFAFA";
+					contactButton.style.background = "#00BBAA";
+					contactButton.style.visibility = "visible";
+					moreInfo.style.color = "#00BBAA";
+					moreInfo.style.visibility = "visible";
+			}
+			else{
+			welcomeLine.style.opacity = "0";
+			welcomeLine.style.visibility = "hidden";
+			// heading.style.transform = "translate(0px,0px)";
+			$("#heading").css("left", "30px");
+					contactButton.style.color = "#transparent";
+					contactButton.style.background = "transparent";
+					contactButton.style.visibility = "hidden";
+					moreInfo.style.color = "transparent";
+					moreInfo.style.visibility = "hidden";
+			}
 
-			menuItems
-			.parent().removeClass("active")
-			.end().filter("[href='#"+id+"']").parent().addClass("active");
-		}                   
+			if (lastId !== id) {
+				lastId = id;
+
+				$(".active").removeClass("active");
+			
+				$("div").filter("[id='"+id+"LSC']").addClass("active");
+
+				menuItems
+				.parent().removeClass("active")
+				.end().filter("[href='#"+id+"']").parent().addClass("active");
+			}                   
 });
 
 $(document).ready(function() {
