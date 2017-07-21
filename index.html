@@ -11,30 +11,52 @@
 </head>
 
 <body>
-<!-- <div class="bg"></div> -->
+
 <!-- <p id="nx" style="position: fixed; color: black;"></p> -->
 
-	<header><p class="tiwHeading" style="color: #00BBAA;">think</p><p class="tiwHeading">inwords</p><p class="cursor">_</p></header>
-
 	<div id="popup" class="popup">
-<!-- method="POST" action="http://formspree.io/contact@thinkinwords.org"  -->
-		<form autocomplete="off">
-		<!-- <h1>Contact Us</h1> -->
-  		<input type="email" name="email" placeholder="Your email">
-  		<textarea name="message" placeholder="Your message"></textarea>
-  		<button type="submit">Send Message</button>
-		</form>
+		<div id="popupContent" class="popupContent">
+		<button id="closePopup" class="closePopup">&times;</button>
+	<!-- method="POST" action="http://formspree.io/contact@thinkinwords.org"  -->
+			<form autocomplete="off">
+			
+			<h1>Contact Us</h1>
+	  		<input type="email" name="email" placeholder="Your email">
+	  		<textarea name="message" placeholder="Your message"></textarea>
+	  		<button type="submit">Send Message</button>
+			</form>
+		</div>
+	</div>
+	
+
+	<div id="home" class="anchorSpace"></div>
+	<div class="welcome"></div>
+
+	<header id="heading"><p class="tiwHeading" style="color: #00BBAA;">think</p><p class="tiwHeading">inwords</p><p class="cursor">_</p></header>
+
+	<div class="welcomeLine" id="welcomeLine">
+		<p class="welcomeLine">
+			<br>
+			A classroom programme designed to help students reason in everyday language.
+		</p>
 	</div>
 
 
 	<button id="contactButton" class="contactButton" onclick="popContactInfo()">Contact Us</button>
+	<button id="floatingContactButton" class="floatingContactButton" onclick="popContactInfo()">
+		<i class="fa fa-envelope" style="color: #FAFAFA; padding: 0px;"></i>
+	</button>
+	
+		<a id="moreInfo" class="moreInfo" href="#intro">
+			<i id="moreArrow" class="fa fa-angle-down" aria-hidden="true"></i>
+		</a>
+	
 
 	<div class="LSC" id="introLSC">
 		<p class="LSC">
 			<br>
-			A classroom that reasons <br>in everyday language.
+			Learning through participation.
 		</p>
-		
 	</div>
 
 	<div id="intro" class="anchorSpace"></div>
@@ -85,12 +107,12 @@
 			<h1>The Programme</h1>
 			<p class="programme">
 			<br>
-				The objective of the programme is to develop the intuitive grasp of reasoning and engagement that students already have into a more explicit and precise set of tools. Specifically, the curriculum aims to address four major tool-sets with overlapping concerns: </p>
+				The objective of the programme is to develop the intuitive grasp of reasoning and engagement that students already have into a more explicit and precise set of tools. Specifically, the programme aims to address four major tool-sets with overlapping concerns: </p>
 					<ul class="programme">
 						<li>frameworks to break down and understand claims,</li>
 						<li>the identification of arguments within conversational language,</li>
 						<li>careful listening and direct engagement with the ideas of others, and</li>
-						<li>the accommodation of counter-arguments within one’s own position.</li>
+						<li>working to organise and extend complex arguments.</li>
 					</ul>
 			<p class="programme">
 				The programme uses collaborative and constructively antagonistic argumentation in combination with different modes of participation to create environments for specific thinking exercises. The students will be speaking, listening, writing, reading, debating, and discussing individually, in pairs or groups, and as a class, corresponding to the abilities whose development is being targeted, as well as their own interests and comfort.<br><br>
@@ -202,7 +224,7 @@
 
 	<footer>
 		<p id="contact" class="contact">contact@thinkinwords.org</p>
-		<a class="contact" href="mailto:contact@thinkinwords.org"><i class="fa fa-envelope"></i></a>
+		<!-- <a class="contact" href="mailto:contact@thinkinwords.org"><i class="fa fa-envelope"></i></a> -->
 	</footer>
 
 
@@ -210,7 +232,8 @@
 
  	<nav>
 		<ul id="menu" class="menu">
-			<li><a class="menuItem" onclick="hideMenu()" href="#intro">Home</a></li>
+			<li><a class="menuItem" onclick="hideMenu()" href="#home" style="display: none;">Home</a></li>
+			<li><a class="menuItem" onclick="hideMenu()" href="#intro">Intro</a></li>
 			<li><a class="menuItem" onclick="hideMenu()" href="#approach">Our Approach</a></li>
 			<li><a class="menuItem" onclick="hideMenu()" href="#programme">The Programme</a></li>
 			<li><a class="menuItem" onclick="hideMenu()" href="#impact">Impact</a></li>
@@ -268,30 +291,43 @@
 			}
 		}
 		function popContactInfo() {
-			// popup.style.display = "block";
-			if(contactButton.innerHTML == "Contact Us"){
-    			contactButton.innerHTML = "contact@thinkinwords.org";
+			popup.style.display = "block";
+			// if(contactButton.innerHTML == "Contact Us"){
+   //  			contactButton.innerHTML = "contact@thinkinwords.org";
+   //  		}
+   //  		else{
+   //  			contactButton.innerHTML = "Contact Us";	
+   //  		}
+		}
+		window.onclick = function(event) {
+			if (event.target == popup) {
+        		popup.style.display = "none";
     		}
-    		else{
-    			contactButton.innerHTML = "Contact Us";	
+    		if (event.target == closePopup) {
+        		popup.style.display = "none";
     		}
 		}
-		// $(document).ready(function(){
- 
-  // 			$("a").on('click', function(event) {
-		// 		if (this.hash !== "") {
-  // 					event.preventDefault();
-  // 					var hash = this.hash;
-	 //    			$('html, body').animate({
-  //   					scrollTop: $(hash).offset().top
-  // 					}, 800, function(){
-		// 		window.location.hash = hash;
-  // 					});
-		// 		}
-		// 		});
-		// });
+		// window.onclick = function(event) {
+  //   		popup.style.display = "none";
+		// }
 
+		$(document).ready(function(){
+  			$("a").on('click', function(event) {
+				if (this.hash !== "") {
+  					event.preventDefault();
+  					var hash = this.hash;
+	    			$('html, body').animate({
+    					scrollTop: $(hash).offset().top
+  					}, 800, function(){
+				window.location.hash = hash;
+  					});
+				}
+				});
+		});
+
+		var inWelcome, headerWidth;
 		var lastId, id,
+		
 		navMenu = $("#menu"),
 
 		menuItems = navMenu.find("a"),
@@ -302,30 +338,27 @@
 		});
 
 
-		menuItems.click(function(e){
-			var href = $(this).attr("href"),
-			offsetTop = href === "#" ? 0 : $(href).offset().top + 1;
-			$('html, body').stop().animate({ 
-				scrollTop: offsetTop
-			}, 700);
-			e.preventDefault();
-		});
+		// menuItems.click(function(e){
+		// 	var href = $(this).attr("href"),
+		// 	offsetTop = href === "#" ? 0 : $(href).offset().top + 1;
+		// 	$('html, body').stop().animate({ 
+		// 		scrollTop: offsetTop
+		// 	}, 700);
+		// 	e.preventDefault();
+		// });
 
+
+		$( window ).resize(function() {
+			headerWidth = $( window ).width()/2.0 - $("#heading").width()/2.0;
+			if(id == "home"){
+				$("#heading").css("left",  headerWidth + "px");
+			}
+		   // document.getElementById("nx").innerHTML = $( window ).width()/2.0;
+		});
 
 		$(window).scroll(function(){
 
 			var fromTop = $(this).scrollTop();
-
-			if(fromTop>2){
-				contactButton.style.color = "#transparent";
-				contactButton.style.background = "transparent";
-				contactButton.style.visibility = "hidden";
-			}
-			else{
-				contactButton.style.color = "#FAFAFA";
-				contactButton.style.background = "#00BBAA";
-				contactButton.style.visibility = "visible";
-			}
 
 			var cur = scrollItems.map(function(){
 				if ($(this).offset().top < fromTop + $( window ).height()/2.0)
@@ -335,22 +368,54 @@
 			
 			id = cur[cur.length-1].attr("id");
 
-// $( window ).resize(function() {
-   // document.getElementById("nx").innerHTML = fromTop;
-// });
-  
+			headerWidth = $( window ).width()/2.0 - $("#heading").width()/2.0;
 
-		if (lastId !== id) {
-			lastId = id;
 
-			$(".active").removeClass("active");
-		
-			$("div").filter("[id='"+id+"LSC']").addClass("active");
 
-			menuItems
-			.parent().removeClass("active")
-			.end().filter("[href='#"+id+"']").parent().addClass("active");
-		}                   
+			if (id == "home"){
+			welcomeLine.style.opacity = "1";
+			welcomeLine.style.visibility = "visible";
+			// heading.style.transform = "translate(-50%,0px)";
+			$("#heading").css("left",  headerWidth + "px");
+					contactButton.style.color = "#FAFAFA";
+					contactButton.style.background = "#00BBAA";
+					contactButton.style.visibility = "visible";
+
+					floatingContactButton.style.color = "#transparent";
+					floatingContactButton.style.background = "transparent";
+					floatingContactButton.style.visibility = "hidden";
+
+					moreInfo.style.color = "#00BBAA";
+					moreInfo.style.visibility = "visible";
+			}
+			else{
+			welcomeLine.style.opacity = "0";
+			welcomeLine.style.visibility = "hidden";
+			// heading.style.transform = "translate(0px,0px)";
+			$("#heading").css("left", "30px");
+					contactButton.style.color = "#transparent";
+					contactButton.style.background = "transparent";
+					contactButton.style.visibility = "hidden";
+
+					floatingContactButton.style.color = "#FAFAFA";
+					floatingContactButton.style.background = "#00BBAA";
+					floatingContactButton.style.visibility = "visible";
+					
+					moreInfo.style.color = "transparent";
+					moreInfo.style.visibility = "hidden";
+			}
+
+			if (lastId !== id) {
+				lastId = id;
+
+				$(".active").removeClass("active");
+			
+				$("div").filter("[id='"+id+"LSC']").addClass("active");
+
+				menuItems
+				.parent().removeClass("active")
+				.end().filter("[href='#"+id+"']").parent().addClass("active");
+			}                   
 });
 
 $(document).ready(function() {
