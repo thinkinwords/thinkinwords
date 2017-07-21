@@ -384,11 +384,11 @@
 					contactButton.style.color = "#FAFAFA";
 					contactButton.style.background = "#00BBAA";
 					contactButton.style.visibility = "visible";
-
+					
 					floatingContactButton.style.color = "#transparent";
 					floatingContactButton.style.background = "transparent";
 					floatingContactButton.style.visibility = "hidden";
-
+						
 					moreInfo.style.color = "#00BBAA";
 					moreInfo.style.visibility = "visible";
 			}
@@ -403,8 +403,9 @@
 
 					floatingContactButton.style.color = "#FAFAFA";
 					floatingContactButton.style.background = "#00BBAA";
-					floatingContactButton.style.visibility = "visible";
-
+					if($("#popup").css("display") == "none"){
+						floatingContactButton.style.visibility = "visible";
+					}
 					moreInfo.style.color = "transparent";
 					moreInfo.style.visibility = "hidden";
 			}
