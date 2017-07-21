@@ -17,9 +17,9 @@ div.welcome{
 	
     
     width: 100vw;
-    height: calc(100vh - 150px);
-    background-color: #transparent;
-    /*opacity: 0.5;*/
+    height: 80vh;
+    background-color: #00BBAA;
+    opacity: 0.05;
     
 
 }
