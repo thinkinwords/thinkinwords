@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="description" content="NA">
+	<meta name="viewport" content="width=device-width, height=device-height">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Fenix|Titillium+Web|Noto+Serif:400i" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="thinkinwordsstyle.css">
+	<title>thinkinwords</title>
+</head>
+
+<body onload="init()">
+	<header id="heading"><p class="tiwHeading" style="color: #00BBAA;">think</p><p class="tiwHeading">inwords</p><p class="cursor">_</p></header>
+
+		<div class="welcomeLine" id="welcomeLine">
+		<p class="welcomeLine">
+			<br>
+			Thanks for getting in touch. We'll get back to you shortly.
+		</p>
+	</div>
+	<button id="contactButton" class="contactButton" style="width:135px;">
+		<a href="index.html" style="
+			text-decoration: none;
+			font-family: 'Fenix', serif;
+			font-size: 15px;
+			color: #FAFAFA;">
+			Back
+		</a>
+	</button>
+	<script>
+		var headerWidth;
+		$( window ).resize(function() {
+		headerWidth = $( window ).width()/2.0 - $("#heading").width()/2.0;
+		
+			$("#heading").css("left",  headerWidth + "px");
+		
+		   
+		});
+
+		function init(){
+			headerWidth = $( window ).width()/2.0 - $("#heading").width()/2.0;
+		$("#heading").css("left",  headerWidth + "px");
+		}
+	</script>
+</body>
+</html>
