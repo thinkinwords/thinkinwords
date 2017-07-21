@@ -14,19 +14,24 @@
 
 <!-- <p id="nx" style="position: fixed; color: black;"></p> -->
 
-	<header id="heading"><p class="tiwHeading" style="color: #00BBAA;">think</p><p class="tiwHeading">inwords</p><p class="cursor">_</p></header>
-
 	<div id="popup" class="popup">
-<!-- method="POST" action="http://formspree.io/contact@thinkinwords.org"  -->
-		<form autocomplete="off">
-		<!-- <h1>Contact Us</h1> -->
-  		<input type="email" name="email" placeholder="Your email">
-  		<textarea name="message" placeholder="Your message"></textarea>
-  		<button type="submit">Send Message</button>
-		</form>
+		<div id="popupContent" class="popupContent">
+	<!-- method="POST" action="http://formspree.io/contact@thinkinwords.org"  -->
+			<form autocomplete="off">
+			<button id="closePopup" class="closePopup">&times;</button>
+			<h1>Contact Us</h1>
+	  		<input type="email" name="email" placeholder="Your email">
+	  		<textarea name="message" placeholder="Your message"></textarea>
+	  		<button type="submit">Send Message</button>
+			</form>
+		</div>
 	</div>
-<div id="home" class="anchorSpace"></div>
-<div class="welcome"></div>
+	
+
+	<div id="home" class="anchorSpace"></div>
+	<div class="welcome"></div>
+
+	<header id="heading"><p class="tiwHeading" style="color: #00BBAA;">think</p><p class="tiwHeading">inwords</p><p class="cursor">_</p></header>
 
 	<div class="welcomeLine" id="welcomeLine">
 		<p class="welcomeLine">
@@ -282,12 +287,17 @@
 			}
 		}
 		function popContactInfo() {
-			// popup.style.display = "block";
-			if(contactButton.innerHTML == "Contact Us"){
-    			contactButton.innerHTML = "contact@thinkinwords.org";
-    		}
-    		else{
-    			contactButton.innerHTML = "Contact Us";	
+			popup.style.display = "block";
+			// if(contactButton.innerHTML == "Contact Us"){
+   //  			contactButton.innerHTML = "contact@thinkinwords.org";
+   //  		}
+   //  		else{
+   //  			contactButton.innerHTML = "Contact Us";	
+   //  		}
+		}
+		window.onclick = function(event) {
+			if (event.target == popup) {
+        		popup.style.display = "none";
     		}
 		}
 
